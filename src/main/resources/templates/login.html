@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Chat Room Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/js/login.js}" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div class="logo_box">
+      <h3 class="main-logo">Chat Room</h3>
+      <form>
+        <div class="input_outer">
+          <span class="u_user"></span>
+          <input
+            id="username"
+            name="username"
+            class="text"
+            type="text"
+            placeholder="Username"
+          />
+        </div>
+        <div class="mb2">
+          <a class="act-but submit" id="submitButton">Login</a>
+        </div>
+        <p id="errorMessage" class="error hidden">You must enter a username.</p>
+      </form>
+    </div>
+  </body>
+</html>
