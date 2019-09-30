@@ -59,6 +59,7 @@ var webSocket = getWebSocket();
  */
 function sendMsgToServer() {
   var $message = $('#msg');
+  console.log($message.val());
   if ($message.val()) {
     webSocket.send(
       JSON.stringify({

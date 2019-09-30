@@ -1,5 +1,7 @@
 package edu.udacity.java.nano.chat;
 
+import com.google.gson.Gson;
+
 /**
  * WebSocket message model
  */
@@ -8,7 +10,7 @@ public class Message {
   private String username;
 
   // add content String
-  private String content;
+  private String msg;
 
   // add type string
   private String type;
@@ -20,10 +22,11 @@ public class Message {
 
   public Message() {}
 
-  public Message(String username, String content, String type) {
+  public Message(String username, String content, String type, int onlineCount) {
     this.username = username;
-    this.content = content;
+    this.msg = content;
     this.type = type;
+    this.onlineCount = onlineCount;
   }
 
   // define Getters and Setters
@@ -36,11 +39,11 @@ public class Message {
   }
 
   public String getContent() {
-    return content;
+    return msg;
   }
 
   public void setContent(String content) {
-    this.content = content;
+    this.msg = content;
   }
 
   public String getType() {
@@ -50,7 +53,6 @@ public class Message {
   public void setType(String type) {
     this.type = type;
   }
-
 
   public String getOnlineCount() {
     return Integer.toString(onlineCount);
