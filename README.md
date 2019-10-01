@@ -6,14 +6,16 @@ A real-time chat application using WebSocket and Spring Boot.
 
 ## Technologies
 
-## Installation
+- Maven
+- Spring Boot
+- Gson
 
 ## Running the Application
 
 - You can run the application using the following command:
 
 ```shell
-mvn build; mvn spring-boot:run
+mvn package spring-boot:run
 ```
 
 ## Requirements
@@ -52,9 +54,15 @@ mvn build; mvn spring-boot:run
 
 - Define annotations
   - @OnOpen
-    -
+    - Increase the user count in the room by 1.
+    - Create a message containing the updated count.
+    - Distribute the message to all users.
   - @OnClose
-    -
+    - Decrease the user count in the room by 1.
+    - Create a message containing the updated count.
+    - Distribute the message to all users.
   - @OnMessage
-    -
+    - Create a message containing the username, text content, type of message, and user count.
+    - Distribute the message to all users.
   - sendMessageToAll()
+    - For each session, send the supplied message containing username, text content, type of message, and user count.

@@ -18,6 +18,9 @@ public class WebSocketChatApplicationTest {
   @Autowired
   private MockMvc testApp;
 
+  /**
+   * Test Case 1: When a user accesses the site, it renders the login.html page.
+   */
   @Test
   public void testLoginPage() throws Exception {
     this.testApp.perform(get("/"))
@@ -26,6 +29,10 @@ public class WebSocketChatApplicationTest {
         .andExpect(view().name("/login"));
   }
 
+  /**
+   * Test Case 2: When a user logs into the site, the site renders the chat.html page.
+   * Test Case 3: When a user logs into the site using the name "TestBot", the site model stores TestBot to the username attribute.
+   */
   @Test
   public void testUserLogin() throws Exception {
     this.testApp.perform(get("/chat?username=TestBot"))
