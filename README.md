@@ -70,3 +70,4 @@ mvn package spring-boot:run
 ## Acknowledgement
 
 - Thanks to Zayah117 for the [excellent video](https://www.youtube.com/watch?v=xkxjLPvLcEI&list=WL&index=6&t=0s) introduction to this project. Without his explanation of the requirements, I never would have finished this.
+- Thanks to adtya9876, whose [Github repo](https://github.com/adtya9876/Chatroom) helped get me through some tough spots. Especially WebSocketChatServer.sendMessageToAll and unit tests. 
