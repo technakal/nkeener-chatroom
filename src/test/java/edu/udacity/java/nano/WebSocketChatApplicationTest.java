@@ -1,5 +1,6 @@
 package edu.udacity.java.nano;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class WebSocketChatApplicationTest {
    */
   @Test
   public void testLoginPage() throws Exception {
+    System.out.println("Performing Test Case 1");
+    System.out.println("======================");
     this.testApp.perform(get("/"))
         .andDo(print())
         .andExpect(status().isOk())
@@ -35,6 +38,8 @@ public class WebSocketChatApplicationTest {
    */
   @Test
   public void testUserLogin() throws Exception {
+    System.out.println("Performing Test Case 2 and 3");
+    System.out.println("============================");
     this.testApp.perform(get("/chat?username=TestBot"))
         .andDo(print())
         .andExpect(status().isOk())

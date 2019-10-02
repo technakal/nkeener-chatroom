@@ -18,7 +18,8 @@ public class WebSocketChatApplication {
     }
 
     /**
-     * Login Page
+     * Returns the login view when the user accesses the base route.
+     * @return
      */
     @GetMapping("/")
     public ModelAndView login() {
@@ -28,10 +29,15 @@ public class WebSocketChatApplication {
     }
 
     /**
-     * Chatroom Page
+     * Returns the chat page when the user logs in.
+     * @param username - The current user's username.
+     * @param request - The server request accompanying the login.
+     * @return
+     * @throws UnknownHostException
      */
     @GetMapping("/chat")
     public ModelAndView index(String username, HttpServletRequest request) throws UnknownHostException {
+
         // create ModelAndView
         ModelAndView mv = new ModelAndView("/chat");
 

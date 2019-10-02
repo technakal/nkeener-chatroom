@@ -66,3 +66,7 @@ mvn package spring-boot:run
     - Distribute the message to all users.
   - sendMessageToAll()
     - For each session, send the supplied message containing username, text content, type of message, and user count.
+
+## Acknowledgement
+
+- Thanks to Zayah117 for the [excellent video](https://www.youtube.com/watch?v=xkxjLPvLcEI&list=WL&index=6&t=0s) introduction to this project. Without his explanation of the requirements, I never would have finished this.
