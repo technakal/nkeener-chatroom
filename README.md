@@ -67,6 +67,21 @@ mvn package spring-boot:run
   - sendMessageToAll()
     - For each session, send the supplied message containing username, text content, type of message, and user count.
 
+## Rubric
+
+- Build a basic chat room.
+    - Build a spring boot application with spring boot plugins.
+    - Build chat message model.
+    - Build chat room controller
+    - Build a login and chat room interface
+- Package and run.
+  - Manual test chat room application.
+  - Package chat room application into jar and run it.
+  - Change the default configuration according to requirement and repackage the application.
+- Build unit tests.
+    - Make sure to cover login, user join, chat and leave.
+    - Repackage the application and make sure tests are passing.
+
 ## Acknowledgement
 
 - Thanks to Zayah117 for the [excellent video](https://www.youtube.com/watch?v=xkxjLPvLcEI&list=WL&index=6&t=0s) introduction to this project. Without his explanation of the requirements, I never would have finished this.
